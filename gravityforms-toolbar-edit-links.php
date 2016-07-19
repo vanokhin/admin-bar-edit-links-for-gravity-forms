@@ -8,7 +8,7 @@
   Description: Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcode
   Text Domain: gravity-forms-toolbar-edit-links
   Domain Path: /languages
-  License: GPL
+  License: GPL v3
  */
 
 
