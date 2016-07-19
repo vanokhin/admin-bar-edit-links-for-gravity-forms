@@ -53,22 +53,6 @@ if ( !class_exists( 'GF_Toolbar_Edit_Links' ) ) {
 
 
 		/**
-		 * Display admin notice
-		 *
-		 * @since  1.0.0
-		 * @return admin notice markup
-		 */
-		public static function admin_notice() {
-
-			printf(
-				'<div class="notice error"><h4>%s</h4><p>%s</p></div>',
-				__( 'Gravity Forms: Toolbar Edit Links', 'gravity-forms-toolbar-edit-links' ),
-				sprintf( __( 'Plugin could not be initialized because class with the same name (%s) already exists', 'gravity-forms-toolbar-edit-links' ), __CLASS__ )
-			);
-		}
-
-
-		/**
 		 * Hook to [gravityform] shortcode to collect Form IDs
 		 *
 		 * @since  1.0.0
@@ -190,11 +174,6 @@ if ( !class_exists( 'GF_Toolbar_Edit_Links' ) ) {
 	add_action( 'plugins_loaded', array( 'GF_Toolbar_Edit_Links', 'init' ) );
 
 } // END if class_exists check
-
-else {
-
-	add_action( 'admin_notices', array( 'GF_Toolbar_Edit_Links', 'admin_notice' ) );
-} // END class_exists check
 
 
 // Strings for PO Edit
