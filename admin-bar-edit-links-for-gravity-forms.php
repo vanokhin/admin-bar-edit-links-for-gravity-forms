@@ -1,23 +1,23 @@
 <?php
 /*
-  Plugin Name: Gravity Forms: Toolbar Edit Links
-  Plugin URI: https://github.com/gndev/gravity-forms-toolbar-edit-links/
+  Plugin Name: Admin Bar Edit Links for Gravity Forms
+  Plugin URI: https://github.com/gndev/admin-bar-edit-links-for-gravity-forms/
   Version: 1.0.0
   Author: Vladimir Anokhin
   Author URI: http://gndev.info/
-  Description: Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcode
-  Text Domain: gravity-forms-toolbar-edit-links
+  Description: Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcodes
+  Text Domain: admin-bar-edit-links-for-gravity-forms
   Domain Path: /languages
   License: GPL v3
  */
 
 
-if ( !class_exists( 'GF_Toolbar_Edit_Links' ) ) {
+if ( !class_exists( 'AB_Edit_Links_For_GF' ) ) {
 
 	/**
 	 * Plugin Class
 	 */
-	final class GF_Toolbar_Edit_Links {
+	final class AB_Edit_Links_For_GF {
 
 		/**
 		 * Form IDs
@@ -102,11 +102,11 @@ if ( !class_exists( 'GF_Toolbar_Edit_Links' ) ) {
 				$form_ID = self::$form_IDs[0];
 
 				$args = array(
-					'id'     => 'gravity-forms-toolbar-edit-links-item-' . $form_ID,
+					'id'     => 'admin-bar-edit-links-for-gravity-forms-item-' . $form_ID,
 					'href'   => admin_url( 'admin.php?page=gf_edit_forms&id=' . $form_ID ),
-					'title'  => __( 'Edit GForm', 'gravity-forms-toolbar-edit-links' ),
+					'title'  => __( 'Edit GForm', 'admin-bar-edit-links-for-gravity-forms' ),
 					'meta'   => array(
-						'class' => 'gravity-forms-toolbar-edit-links-item-top'
+						'class' => 'admin-bar-edit-links-for-gravity-forms-item-top'
 					),
 				);
 
@@ -119,10 +119,10 @@ if ( !class_exists( 'GF_Toolbar_Edit_Links' ) ) {
 
 				// Parent node args
 				$args = array(
-					'title' => __( 'Edit GForms', 'gravity-forms-toolbar-edit-links' ),
-					'id'    => 'gravity-forms-toolbar-edit-links-group',
+					'title' => __( 'Edit GForms', 'admin-bar-edit-links-for-gravity-forms' ),
+					'id'    => 'admin-bar-edit-links-for-gravity-forms-group',
 					'meta'   => array(
-						'class' => 'gravity-forms-toolbar-edit-links-item-top'
+						'class' => 'admin-bar-edit-links-for-gravity-forms-item-top'
 					),
 				);
 
@@ -137,12 +137,12 @@ if ( !class_exists( 'GF_Toolbar_Edit_Links' ) ) {
 
 					// Child node args
 					$args = array(
-						'id'     => 'gravity-forms-toolbar-edit-links-item-' . $form_ID,
-						'parent' => 'gravity-forms-toolbar-edit-links-group',
+						'id'     => 'admin-bar-edit-links-for-gravity-forms-item-' . $form_ID,
+						'parent' => 'admin-bar-edit-links-for-gravity-forms-group',
 						'href'   => admin_url( 'admin.php?page=gf_edit_forms&id=' . $form_ID ),
 						'title'  => $form['title'],
 						'meta'   => array(
-							'class' => 'gravity-forms-toolbar-edit-links-item-sub'
+							'class' => 'admin-bar-edit-links-for-gravity-forms-item-sub'
 						),
 					);
 
@@ -163,7 +163,7 @@ if ( !class_exists( 'GF_Toolbar_Edit_Links' ) ) {
 
 			// Check this is front and Toolbar is showing
 			if ( !is_admin() && is_admin_bar_showing() ) {
-				echo "\n<style>.gravity-forms-toolbar-edit-links-item-top>.ab-item:before{content:'\\f464';top:2px}</style>\n";
+				echo "\n<style>.admin-bar-edit-links-for-gravity-forms-item-top>.ab-item:before{content:'\\f464';top:2px}</style>\n";
 			}
 		}
 
@@ -171,12 +171,12 @@ if ( !class_exists( 'GF_Toolbar_Edit_Links' ) ) {
 	} // END GF_Toolbar_Edit_Links class
 
 	// Init plugin
-	add_action( 'plugins_loaded', array( 'GF_Toolbar_Edit_Links', 'init' ) );
+	add_action( 'plugins_loaded', array( 'AB_Edit_Links_For_GF', 'init' ) );
 
 } // END if class_exists check
 
 
 // Strings for PO Edit
 if ( false ) {
-	__( 'Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcode', 'gravity-forms-toolbar-edit-links' );
+	__( 'Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcodes', 'admin-bar-edit-links-for-gravity-forms' );
 }

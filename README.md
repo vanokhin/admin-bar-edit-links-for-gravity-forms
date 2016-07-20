@@ -1,4 +1,4 @@
-# Gravity Forms: Toolbar Edit Links
+# Toolbar Edit Links for Gravity Forms
 
 ![Screenshot](https://raw.githubusercontent.com/gndev/gravityforms-toolbar-edit-links/master/banner-772x250.jpg)
 

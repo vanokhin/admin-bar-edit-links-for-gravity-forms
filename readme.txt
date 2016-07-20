@@ -1,4 +1,4 @@
-=== Gravity Forms: Toolbar Edit Links ===
+=== Admin Bar Edit Links for Gravity Forms ===
 Contributors: gn_themes
 License: GPL
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMA2VA7JDXWDY
@@ -7,17 +7,17 @@ Requires at least: 3.5
 Tested up to: 5
 Stable tag: trunk
 
-Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcode
+Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcodes
 
 
 == Description ==
 
-This plugin is an add-on for Gravity Froms.
+Un-official add-on for [Gravity Forms](http://www.gravityforms.com/).
+Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcodes
 
-Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcode.
 Multiple forms on same page are also supported.
 
-[Contribute on GitHub](https://github.com/gndev/gravity-forms-toolbar-edit-links/)
+[Fork on GitHub](https://github.com/gndev/admin-bar-edit-links-for-gravity-forms/)
 
 
 == Installation ==
@@ -25,7 +25,7 @@ Multiple forms on same page are also supported.
 Unzip plugin files and upload them under your '/wp-content/plugins/' directory.
 
 Resulted names will be:
-  './wp-content/plugins/gavity-forms-toolbar-edit-links/*'
+  './wp-content/plugins/admin-bar-edit-links-for-gravity-forms/*'
 
 Activate plugin at "Plugins" administration page.
 
