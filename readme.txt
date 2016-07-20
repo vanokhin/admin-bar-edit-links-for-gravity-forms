@@ -13,7 +13,8 @@ Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcodes
 == Description ==
 
 Un-official add-on for [Gravity Forms](http://www.gravityforms.com/).
-Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcodes
+
+Adds "Edit GForm" link to Admin Bar on pages with Gravity Forms shortcodes.
 
 Multiple forms on same page are also supported.
 
